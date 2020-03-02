@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: darkred;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+      }
+      h1 {
+        color: gold;
+        font-family: -apple-system, "Open Sans", sans-serif;
+      }
+      img {
+        object-fit: cover;
+        transform: rotate(270deg);
+        padding: 25px 25px;
+      }
+      .members {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .members-row {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+      }
+      .members-col {
+        display: flex;
+        flex-direction: column;
+      }
+      .test {
+        width: inherit;
+        height: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="width: 100%; text-align: center;">
+      <div class="test">
+        <img style="transform: rotate(360deg);" src="headshots/group_pic.jpg" />
+      </div>
+    </div>
+    <div style="text-align: center; padding-bottom: 50px">
+      <h1>Meet the brothers of Theta Tau</h1>
+    </div>
+    <div class="members-col">
+      <div class="members-row">
+        <div id="test" class="members"></div>
+
+        <script type="text/javascript">
+          const members = [
+            "members",
+            "Kyle Woo",
+            "Van Nguyen",
+            "Kelsey Yim",
+            "Christy Vo",
+            "John Tran",
+            "Aryanna Pham",
+            "Benjamin Fuller",
+            "Krystal Hortizuela",
+            "Jaspinder Upal",
+            "Joshua Davila",
+            "Jose Takashi Sanrindo",
+            "Dayana Santamaria",
+            "Marianne Tolentino",
+            "Alexander Sigler",
+            "Julian Delgado",
+            "Sunny Buha",
+            "Diane Le",
+            "Evangelyn Balcita",
+            "Christian Arellano",
+            "Douglas Stevens",
+            "Alexis Gonzalez",
+            "Katelyn Nguyen",
+            "Leorenzo Openano",
+            "Jacky Cai",
+            "Joseph Sayegh",
+            "Anthony Aun",
+            "Tony Dang",
+            "Peter Le",
+            "Conner Cook",
+            "Rushi Sharma",
+            "Austin Nguyen",
+            "Colline Orlanes",
+            "John Esquivel",
+            "Connor Chu",
+            "Lisa Hong"
+          ];
+          var imgSrc = "headshots/members/";
+          for (i = 1; i < 36; i++) {
+            imgSrc += i;
+            var img = document.createElement("img");
+            var div = document.createElement("div");
+            img.setAttribute("src", imgSrc + ".JPG");
+            img.setAttribute("height", "180px");
+            img.setAttribute("width", "180px");
+            var text = document.createTextNode(members[i]);
+            div.appendChild(text);
+            div.appendChild(img);
+            div.style.color = "gold";
+            div.style.flex = "1";
+            div.style.flexDirection = "column";
+            div.style.padding = "10px";
+            div.style.whiteSpace = "no wrap";
+            document.getElementById("test").appendChild(div);
+            var imgSrc = "headshots/members/";
+          }
+        </script>
+      </div>
+      <div style="height: 50px"></div>
+    </div>
+  </body>
+</html>
